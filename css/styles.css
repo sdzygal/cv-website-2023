@@ -69,12 +69,18 @@ header {
 
 .sidebar {
     width: 100%;
-    height: 0%;
+    height: 0;
     position: fixed;
     top: 0;
     left: 0;
     overflow: hidden;
+    background-color: #191919;
     z-index: 1;
+}
+
+.show-nav {
+    height: 100%;
+    overflow: visible;
 }
 
 .sidebar-wrapper {
@@ -279,4 +285,10 @@ header {
 .scroll-down .fas {
     transform: rotate(270deg);
     margin-left: 10px;
+}
+
+/* Media queries */
+
+@media screen and (min-width: 950px) {
+    
 }
