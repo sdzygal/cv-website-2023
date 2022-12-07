@@ -45,7 +45,7 @@ const myFunc = (navCondition) => {
     }
 }
 
-// Canvas in skills section
+// TagCanvas in skills section
 
 $(document).ready(function (){
     if(!$("#skillsCanvas").tagcanvas({
@@ -56,7 +56,7 @@ $(document).ready(function (){
         maxSpeed: 0.05,
         weight: true,
     }, "tags")){
-        // hide the canvas if smth wordSpacing
+        // hide the canvas if smth went wrong
         $("#skills-container");
     }
 })

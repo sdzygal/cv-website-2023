@@ -403,7 +403,7 @@ header {
     opacity: 1;
 }
 
-/* About section */
+/* About */
 #about {
     padding-left: 1.5rem;
     margin-top: 100px;
@@ -419,11 +419,64 @@ header {
     line-height: 1.5rem;
 }
 
+/* Blog section */
+
+.blog {
+    width: 85%;
+    margin: 100px auto 0;
+    position: relative;
+}
+
+.blog .big-text {
+    font-size: 12rem;
+    font-weight: bolder;
+    position: absolute;
+    top: -180px;
+    left: 0;
+}
+
+.blog-articles {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ flex-direction: column;
+}
+
+.post {
+    border-top: 2px solid #08fdd8;
+    width: 100%;
+    height: 220px;
+    background-color: #1d1d1d;
+    padding: 25px;
+    color: #909096;
+    box-shadow: 0 0 5px 5px #191919;
+    margin-bottom: 30px;
+}
+
+.post-date {
+    color: #08fdd8;
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.postTitle h5 a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    margin: 15px 0;
+}
+
+.postTitle h5 a:hover {
+    color: #8b64f7;
+    
+}
 
 
 /* Media queries */
 
-@media screen and (min-width: 950px) {
+@media screen and (min-width: 1200px) {
    header {
     justify-content: flex-end;
     align-items: flex-end;
@@ -520,5 +573,27 @@ header {
     width: 242px;
     height: 236px;
 }
+
+/* Media Q for abou section */
+#about {
+    padding-left: 10.8rem;
+    flex-direction: row;
+    margin: 100px auto 0;
+    width: 90%;
+}
+
+.about-description #header {
+    width: 550px;
+    font-size: 3rem;
+}
+
+.about-description p {
+    width: 400px;
+}
+
+.skills {
+    margin-right: 20%;
+}
+
 
 }
