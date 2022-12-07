@@ -44,3 +44,19 @@ const myFunc = (navCondition) => {
         btnBars.style.display = 'block';
     }
 }
+
+// Canvas in skills section
+
+$(document).ready(function (){
+    if(!$("#skillsCanvas").tagcanvas({
+        textColour: "#8b64f7",
+        outlineColour: "transparent",
+        reverse: true,
+        depth: 0.8,
+        maxSpeed: 0.05,
+        weight: true,
+    }, "tags")){
+        // hide the canvas if smth wordSpacing
+        $("#skills-container");
+    }
+})
