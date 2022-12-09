@@ -495,6 +495,7 @@ header {
     position: relative;
 }
 
+
 .form-input-group input, textarea {
     width: 100%;
     height: 45px;
@@ -504,6 +505,7 @@ header {
     margin-bottom: 5px;
     font-size: 0.957rem;
     box-shadow: 0 0 0px 1000px #2b2b2b inset;
+    color: #8a8484;
  }
 
  .form-input-group textarea {
@@ -520,8 +522,52 @@ header {
     display: block;
     font-size: 1rem;
     cursor: pointer;
-
  }
+
+ .form-input-group input + span::after,
+ .form-input-group textarea + span::after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    background: #8b64f7;
+    bottom: 5px;
+    left: 0;
+    transition: all 0.3s linear;
+ }
+
+ .form-input-group input:focus + span::after,
+ .form-input-group textarea:focus + span::after {
+    width: 100%;
+ }
+
+ .google-map {
+    width: 100%;
+    position: relative;
+ }
+
+ .google-map iframe {
+    width: 100%;
+    margin-top: 50px;
+    height: 60vh;
+ }
+
+ .map-content {
+    background-color: #000;
+    color: #f3f3f3;
+    position: absolute;
+    top: 70px;
+    left: 40px;
+    padding: 20px;
+    backdrop-filter: blur(70%);
+ }
+
+ .map-content span {
+    font-size: 16px;
+    margin: 5px 0;
+    line-height: 1.5rem;
+ }
+
 
 /* Media queries */
 
@@ -671,6 +717,31 @@ header {
     font-size: 1.7rem;
     line-height: 2rem;
 
+}
+
+/* Contacts */
+.contact {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    grid-column-gap: 2.5rem;
+}
+
+.contact-form {
+    width: 500px;
+    margin: 0 0 0 auto;
+}
+
+.form-input-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 0.77rem;
+}
+
+.google-map iframe {
+    width: 100%;
+    height: 100vh;
 }
 
 }
