@@ -541,6 +541,40 @@ header {
     width: 100%;
  }
 
+ .error input,
+ .error textarea {
+    border-bottom: 2px solid red;
+    transition: all .2s linear;
+ }
+
+ .success input,
+ .success textarea {
+    border-bottom: 2px solid green;
+    transition: all .2s linear;
+ }
+
+ .message {
+    position: absolute;
+    top: 500px;
+    right: 0;
+    transition: all .3s ease-in-out;
+    transform: translate(100%, 50%);
+    transition: all .3s linear;
+ }
+
+ .message-content {
+    padding: 15px;
+    background: red;
+    color: #fff;
+    opacity: 1;
+    transition: opacity 550ms ease-in-out;
+    margin-bottom: 5px;
+ }
+
+ .message-content.hide {
+    opacity: 0;
+ }
+
  .google-map {
     width: 100%;
     position: relative;

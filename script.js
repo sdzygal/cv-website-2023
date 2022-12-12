@@ -60,3 +60,61 @@ $(document).ready(function (){
         $("#skills-container");
     }
 })
+
+// Contacts
+
+const nameInput = document.querySelector('.name')
+const emailInput = document.querySelector('.email')
+const subjectInput = document.querySelector('.subject')
+const textareaInput = document.querySelector('.textarea')
+
+
+const contactForm = document.querySelector('.contact-form')
+
+contactForm.addEventListener("submit", (e) => {
+    e.preventDefault()
+    validateInput()
+})
+
+const validateInput = () => {
+
+
+   let email = emailInput.value
+   let textarea = textareaInput.value
+
+   if(!email && !textarea) {
+        setError(emailInput.parentElement)
+        setError(textareaInput.parentElement)
+        showMessage("Form inputs are empty")
+   }
+}
+
+const setError = (input) => {
+    if(input.classList.contains("success")) {
+        input.classList.remove("success")
+    } else {
+        input.classList.add("error")
+    }
+}
+
+const setSuccess = (input) => {
+    if(input.classList.contains("error")) {
+        input.classList.remove("error")
+    } else {
+        input.classList.add("success")
+    }
+
+} 
+
+const messageDiv = document.querySelector('.message')
+const showMessage = (message) => {
+    const divContent = document.createElement('div')
+    divContent.textContent = message
+    divContent.classList.add("message-content")
+    messageDiv.prepend(divContent)
+
+    setTimeout(() => {
+
+    }, 5000)
+
+}
