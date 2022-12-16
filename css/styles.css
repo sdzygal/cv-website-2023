@@ -182,7 +182,7 @@ header {
     position: relative;
 }
 
-.description h1::before {
+/* .description h1::before {
     content: '<h1>';
     position: absolute;
     top: -80px;
@@ -203,7 +203,7 @@ header {
     font-family: 'Caveat', cursive;
     color: #666565;
     letter-spacing: 3px;
-}
+} */
 
 .description .gray-descr {
     margin-top: 30px;
@@ -286,10 +286,10 @@ header {
     font-size: 14px;
 }
 
-.scroll-down--left {
+/* .scroll-down--left {
     left: -30px;
     right: auto;
-}
+} */
 
 .scroll-down span {
     display: inline-block;
@@ -330,6 +330,10 @@ header {
     margin-bottom: 30px;
 }
 
+.contact-btn.portfolio {
+    margin-top: 1.5rem;
+}
+
 .big-text {
     font-size: 12rem;
     font-weight: 700;
@@ -347,15 +351,17 @@ header {
 
 .projectswall ul {
     list-style: none;
+    align-items: stretch;
     display: -ms-flexbox;
     display: -webkit-box;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .projectswall ul li {
-    width: 161px;
-    height: 160px;
+    width: 210px;
+    height: 211px;
     position: relative;
     overflow: hidden;
     display: list-item;
@@ -365,8 +371,8 @@ header {
     position: absolute;
     top: 0;
     left: 0;
-    bottom: 0;
     right: 0;
+    bottom: 0;
     transition: transform 0.5s, opacity 0.5s;
     transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s;
 }
@@ -419,6 +425,9 @@ header {
     line-height: 1.5rem;
 }
 
+#skillsCanvas {
+    margin-left: 15%;
+}
 
 /* Blog section */
 
@@ -695,19 +704,20 @@ header {
 }
 
 .projectswall {
-    padding-left: 8.5rem;
+ position: relative;
+ margin: 0 auto;
 }
 
 .projectswall ul li {
-    width: 242px;
-    height: 236px;
+    width: 260px;
+    height: 280px;
 }
 
 /* Media Q for about section */
 #about {
     padding-left: 10.2rem;
     flex-direction: row;
-    margin: 100px auto 0;
+    margin: 100px auto -130px auto;
     width: 90%;
 }
 
@@ -720,15 +730,18 @@ header {
     width: 400px;
 }
 
-.skillsCanvas {
-    margin-right: 20%;
+#skillsCanvas {
+    position: relative;
+    top: -437px;
+    left: 510px;
 }
+
 
 /* Blog Media Q */
 
 .blog {
     width: 90%;
-    margin: 100px auto 0;
+    margin: 0 auto;
 }
 
 .blog .big-text {
