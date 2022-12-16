@@ -77,8 +77,6 @@ contactForm.addEventListener("submit", (e) => {
 })
 
 const validateInput = () => {
-
-
    let email = emailInput.value
    let textarea = textareaInput.value
 
@@ -86,8 +84,23 @@ const validateInput = () => {
         setError(emailInput.parentElement)
         setError(textareaInput.parentElement)
         showMessage("Form inputs are empty")
-   }
-}
+   } else if(!email && textarea) {
+    setError(emailInput.parentElement)
+    showMessage("Email is empty")
+   } else if(!textarea && email) {
+    setError(textareaInput.parentElement)
+    showMessage("Please, provide a message")
+    } else if (email && textarea) {
+        emailjs.sendForm("service_7t6as7k", "template_ql1604d", contactForm, "G0YKxxoi0_SlvtXNQ")
+        setSuccess(emailInput.parentElement)
+        setSuccess(textareaInput.parentElement)
+        showMessage('Message sent. Thanks for contacting me!', 'green')
+        textareaInput.value = ''
+        emailInput.value = ''
+        nameInput.value = ''
+        subjectInput.value = ''
+    }  
+} 
 
 const setError = (input) => {
     if(input.classList.contains("success")) {
@@ -107,14 +120,20 @@ const setSuccess = (input) => {
 } 
 
 const messageDiv = document.querySelector('.message')
-const showMessage = (message) => {
+const showMessage = (message, updateColor) => {
     const divContent = document.createElement('div')
     divContent.textContent = message
     divContent.classList.add("message-content")
+    divContent.style.backgroundColor = updateColor
     messageDiv.prepend(divContent)
 
     setTimeout(() => {
+        divContent.classList.add("hide")
 
+
+        divContent.addEventListener("transitionend", () => {
+            divContent.remove()
+        })
     }, 5000)
 
 }
