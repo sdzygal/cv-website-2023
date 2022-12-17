@@ -351,17 +351,15 @@ header {
 
 .projectswall ul {
     list-style: none;
-    align-items: stretch;
     display: -ms-flexbox;
     display: -webkit-box;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
 }
 
 .projectswall ul li {
-    width: 210px;
-    height: 211px;
+    min-width: 200px;
+    min-height: 211px;
     position: relative;
     overflow: hidden;
     display: list-item;
@@ -426,14 +424,14 @@ header {
 }
 
 #skillsCanvas {
-    margin-left: 15%;
+    margin-left: 13%;
 }
 
 /* Blog section */
 
 .blog {
     width: 85%;
-    margin: 100px auto 0;
+    margin: 250px auto 0;
     position: relative;
 }
 
@@ -486,6 +484,10 @@ header {
 /* Contacts section */
 .contact-header {
     margin-bottom: 30px;
+}
+
+.contact p {
+    line-height: 1.5rem;
 }
 
 .contact {
@@ -658,13 +660,12 @@ header {
     font-size: 1rem;
    }
    .scroll-down {
-    right: -30px;
     bottom: 3.3rem;
    }
-   .scroll-down--left {
+   /* .scroll-down--left {
     left: 110px;
     right: auto;
-   }
+   } */
 
    #portfolio {
     padding: 5rem 0 5rem 15rem;
@@ -709,15 +710,16 @@ header {
 }
 
 .projectswall ul li {
-    width: 260px;
-    height: 280px;
+    width: 330px;
+    height: 331px;
 }
+
 
 /* Media Q for about section */
 #about {
     padding-left: 10.2rem;
     flex-direction: row;
-    margin: 100px auto -130px auto;
+    margin: 100px auto 0;
     width: 90%;
 }
 
@@ -741,12 +743,13 @@ header {
 
 .blog {
     width: 90%;
-    margin: 0 auto;
+    margin: 0 auto 40px;
 }
 
 .blog .big-text {
     font-size: 27rem;
-    top: -270px;
+    top: -370px;
+    margin-left: 40px;
 }
 
 .blog-articles {
