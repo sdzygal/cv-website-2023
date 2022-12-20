@@ -182,28 +182,6 @@ header {
     position: relative;
 }
 
-/* .description h1::before {
-    content: '<h1>';
-    position: absolute;
-    top: -80px;
-    left: -10px;
-    font-size: 1.2rem;
-    font-family: 'Caveat', cursive;
-    color: #666565;
-    letter-spacing: 3px;
-}
-
-
-.description h1::after {
-    content: '</h1>';
-    position: absolute;
-    bottom: 180px;
-    right: -63px;
-    font-size: 1.2rem;
-    font-family: 'Caveat', cursive;
-    color: #666565;
-    letter-spacing: 3px;
-} */
 
 .description .gray-descr {
     margin-top: 30px;
@@ -285,11 +263,6 @@ header {
     display: block;
     font-size: 14px;
 }
-
-/* .scroll-down--left {
-    left: -30px;
-    right: auto;
-} */
 
 .scroll-down span {
     display: inline-block;
@@ -662,10 +635,6 @@ header {
    .scroll-down {
     bottom: 3.3rem;
    }
-   /* .scroll-down--left {
-    left: 110px;
-    right: auto;
-   } */
 
    #portfolio {
     padding: 5rem 0 5rem 15rem;
@@ -734,7 +703,7 @@ header {
 
 #skillsCanvas {
     position: relative;
-    top: -437px;
+    top: -450px;
     left: 510px;
 }
 

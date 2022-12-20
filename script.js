@@ -54,6 +54,7 @@ $(document).ready(function (){
         depth: 0.8,
         maxSpeed: 0.05,
         weight: true,
+        wheelZoom: false,
     }, "tags")){
         // hide the canvas if smth went wrong
         $("#skills-container");
